@@ -1,0 +1,28 @@
+.left-panel {
+  width: 250px;
+  transition: width 0.3s;
+}
+
+.left-panel.collapsed {
+  width: 60px;
+}
+
+.collapse-button {
+  display: block;
+  margin: 10px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .left-panel {
+    width: 100%;
+    position: absolute;
+    z-index: 1000;
+  }
+
+  .left-panel.collapsed {
+    width: 0;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,31 @@
+.app {
+  display: flex;
+}
+
+.left-panel {
+  width: 200px;
+  background: #f4f4f4;
+  padding: 20px;
+  border-right: 1px solid #ccc;
+}
+
+.left-panel ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.left-panel li {
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.left-panel li.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
