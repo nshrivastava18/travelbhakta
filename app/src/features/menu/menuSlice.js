@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   activeMenu: 'Home',
-  activeSubMenu: 'Dashboard',
+  activeSubMenu: 'home',
 };
 
 const menuSlice = createSlice({

@@ -3,10 +3,8 @@ import { Link } from 'react-router-dom';
 import '../styles/MenuItem.css';
 
 const MenuItem = ({ menu, subMenus, activeMenu, activeSubMenu, setActiveMenu }) => {
-  const [isOpen, setIsOpen] = useState(false);
 
   const handleMenuClick = () => {
-    setIsOpen(!isOpen);
     if (subMenus && subMenus.length > 0) {
       setActiveMenu({ menu, subMenu: subMenus[0] });
     } else {
@@ -19,22 +17,9 @@ const MenuItem = ({ menu, subMenus, activeMenu, activeSubMenu, setActiveMenu }) 
   };
 
   return (
-    <div className="menu-item">
-      <div onClick={handleMenuClick} className={`menu-title ${activeMenu === menu ? 'active' : ''}`}>
-        {menu}
-      </div>
-      {isOpen && subMenus && (
-        <ul className="sub-menu">
-          {subMenus.map((subMenu) => (
-            <li key={subMenu} className={`sub-menu-item ${activeSubMenu === subMenu ? 'active' : ''}`}>
-              <Link to={`/${subMenu}`} onClick={() => handleSubMenuClick(menu, subMenu)}>
-                {subMenu}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
+    <Link to={`/${subMenus[0]}`} onClick={() => handleSubMenuClick(menu, subMenus[0])}>
+      {menu}
+    </Link>
   );
 };
 

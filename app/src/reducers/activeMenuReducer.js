@@ -1,6 +1,6 @@
 const initialState = {
   activeMenu: 'Home',
-  activeSubMenu: 'Dashboard',
+  activeSubMenu: 'home',
 };
 
 const activeMenuReducer = (state = initialState, action) => {

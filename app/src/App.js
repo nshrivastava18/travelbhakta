@@ -7,7 +7,7 @@ import AppRouter from './components/Route/Router';
 const App = () => {
   return (
     <Provider store={store}>
-      <div className="app">
+      <div className="app-container">
         <AppRouter />
       </div>
     </Provider>

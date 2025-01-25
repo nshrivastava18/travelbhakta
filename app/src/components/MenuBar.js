@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setActiveMenu } from '../features/menu/menuSlice';
 import MenuItem from './MenuItem';
-// import HRMSLogo from '../assets/hrms-logo.svg'; // Import the SVG image
+import "../styles/App.css";
 
-const LeftPanel = () => {
+const MenuBar = () => {
   const dispatch = useDispatch();
   const activeMenu = useSelector((state) => state.menu.activeMenu);
   const activeSubMenu = useSelector((state) => state.menu.activeSubMenu);
@@ -22,22 +22,19 @@ const LeftPanel = () => {
   };
 
   return (
-    <div className="left-panel">
-      {/* <img src={HRMSLogo} alt="HRMS Logo" className="hrms-logo" /> */}
-      <ul>
-        {menus.map(({ menu, subMenus }) => (
-          <MenuItem
-            key={menu}
-            menu={menu}
-            subMenus={subMenus}
-            activeMenu={activeMenu}
-            activeSubMenu={activeSubMenu}
-            setActiveMenu={handleSetActiveMenu}
-          />
-        ))}
-      </ul>
-    </div>
+    <nav className="navbar">
+      {menus.map(({ menu, subMenus }) => (
+        <MenuItem
+          key={menu}
+          menu={menu}
+          subMenus={subMenus}
+          activeMenu={activeMenu}
+          activeSubMenu={activeSubMenu}
+          setActiveMenu={handleSetActiveMenu}
+        />
+      ))}
+    </nav>
   );
 };
 
-export default LeftPanel;
+export default MenuBar;

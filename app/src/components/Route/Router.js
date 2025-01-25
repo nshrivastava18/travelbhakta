@@ -1,22 +1,27 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import LeftPanel from '../LeftPanel';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from '../pages/Home';
 import About from '../pages/About';
 import Bookings from '../pages/Bookings';
+import Contact from '../pages/Contact';
+import MenuBar from '../MenuBar';
 
 const AppRouter = () => (
-  <Router>
-    <LeftPanel />
+  <BrowserRouter>
+    {/* <LeftPanel /> */}
+    <header className="header">
+      <div className="logo">travelbhakta</div>
+      <MenuBar />
+    </header>
     <div className="content">
       <Routes>
-        <Route path="/home" component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/bookings" component={Bookings} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/gallery" element={<Bookings />} />
       </Routes>
     </div>
-
-  </Router>
+  </BrowserRouter>
 );
 
 export default AppRouter;
