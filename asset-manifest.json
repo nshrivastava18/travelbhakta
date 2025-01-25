@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/travelbhakta/static/css/main.3278f8a3.css",
+    "main.js": "/travelbhakta/static/js/main.de65ba74.js",
+    "index.html": "/travelbhakta/index.html",
+    "main.3278f8a3.css.map": "/travelbhakta/static/css/main.3278f8a3.css.map",
+    "main.de65ba74.js.map": "/travelbhakta/static/js/main.de65ba74.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3278f8a3.css",
+    "static/js/main.de65ba74.js"
+  ]
+}
